@@ -1,5 +1,5 @@
 <div class="product">
-    <img [src]="'/images/robot-parts/' + product.imageName" [alt]="product.name"/>
+    <img [src]="getImageUrl(product)" [alt]="product.name"/>
     <input type="text" [value]="product.name"/>
     <div class="details">
         <div>
@@ -9,7 +9,7 @@
         </div>
     </div>
     <div class="price">
-        <p>${{ product.price | currency:'USD' }}</p>
+        <p>{{ product.price | currency:'USD' }}</p>
         <button class="cta">Buy</button>
     </div>
 </div>
